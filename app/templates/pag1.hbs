@@ -1,0 +1,9 @@
+<ul>
+	{{#each tasks as |task|}}
+		<li>
+			<p>{{task.task}}</p>
+		</li>
+	{{/each}}
+</ul>
+{{input type="text" value=newtask}}
+<button {{action 'neddDo' newtask on="click"}}>Add</button>
