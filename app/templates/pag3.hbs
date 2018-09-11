@@ -1,0 +1,10 @@
+<ul>
+	{{#each tasks as |task|}}
+		<li>
+			<p>{{task.task}}</p>
+			<button {{action 'deletetask' on="click"}}>Delete</button>
+		</li>
+	{{/each}}
+</ul>
+{{input type="text" value=newtask}}
+<button {{action 'neddDo' newtask on="click"}}>Add</button>

@@ -1,9 +1,7 @@
-<ul>
-	{{#each tasks as |task|}}
-		<li>
-			<p>{{task.task}}</p>
-		</li>
-	{{/each}}
-</ul>
-{{input type="text" value=newtask}}
-<button {{action 'neddDo' newtask on="click"}}>Add</button>
+<form>
+	<label>Name: </label>
+	{{input type="text" value=nameuser}}<br><br>
+	<label>Password: </label>
+	{{input type="password" value=passworduser}}
+	<button {{action 'doSomething' on="click"}}>Log in</button>
+</form>

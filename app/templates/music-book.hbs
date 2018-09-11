@@ -1,0 +1,16 @@
+{{#each model as |music|}}
+	<img src={{music.img}}>
+	<p>{{music.title}}</p>
+	<p>{{music.author}}</p>
+	<p>{{music.price}}</p>
+	{{#link-to 'albums' music.id}}
+		Editar
+	{{/link-to}}
+	<button {{action 'deleteAlbum' on='click'}}>Delete</button>
+{{/each}}
+<br><br>
+<img src={{img}}>
+{{input type="text" value=title}}<br>
+{{input type="text" value=author}}<br>
+{{input type="text" value=price}}<br>
+<button {{action 'addAlbum' on='click'}}>Create</button>

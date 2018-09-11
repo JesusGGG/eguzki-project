@@ -1,14 +1,6 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
-	tasks: [{
-		task: 'Tarea'
-	},{
-		task: 'Lavar trastes'
-	},{
-		task: 'Pasear al perro'
-	}],
-
 	actions: {
 		doSomething () {
 			var nameuser = this.get("nameuser");
@@ -20,15 +12,6 @@ export default Controller.extend({
 			} else {
 				alert('No estas registrado');
 			}
-		},
-
-		neddDo(newtask){
-			var tasks = this.get('tasks');
-			tasks.pushObject({
-				task: newtask
-			})
-			this.set('newtask','')
 		}
 	}
-
 });
